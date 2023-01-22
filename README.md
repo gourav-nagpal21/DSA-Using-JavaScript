@@ -1,3 +1,0 @@
-- Remaining Topics
-  - Space Complexity
-  - Remove Shift from Merge Sort
