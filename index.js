@@ -1,18 +1,18 @@
-const clean = (number) => {
-  number = number.replace(/[^0-9]/g, '');
-  let numberArray = number.split('');
-  if(numberArray.length < 10) throw new Error('Incorrect number of digits')
-  if(numberArray.length > 10){
-    if(numberArray[0] == '1'){
-      const [a, ...b] = numberArray
-      console.log(a, b)
+function InsertionSort(a){
+  let len = a.length;
+  for (let i = 1; i = len - 1; i++){
+    let temp = a[i];
+    let j = i - 1;
+    while(j >= 0 && a[j] > temp){
+      a[j+1] = a[j];
+      j = j - 1;
     }
-    else{
-     throw new Error('11 digits must start with 1') 
-    }
+    a[j] = temp;
   }
-  return number;
-};
+}
 
-console.log(clean('12234567890'));
-console.log(clean('321234567890'));
+var arr = [5, 9, 1, 3, 6, 16, 2, 99];
+InsertionSort(arr);
+console.log(arr)
+
+// Big O = O[log n]
